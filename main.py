@@ -76,5 +76,4 @@ async def on_message(message):
 
 # Uruchomienie bota
 keep_alive()
-token = os.getenv("DISCORD_TOKEN")
-bot.run(token)
+bot.run('MTMyNTgwNzI5MTAzOTA5Mjc1Ng.GZm_sa.SRJM7a0WIAHUceNEGVRjW1IRGHNlxfH-ZIf1RQ')
