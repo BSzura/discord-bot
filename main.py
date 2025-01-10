@@ -20,7 +20,7 @@ def home():
     return "Bot działa!"
 
 def run():
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080)))
 
 def keep_alive():
     t = Thread(target=run)
@@ -76,5 +76,10 @@ async def on_message(message):
 
 # Uruchomienie bota
 keep_alive()
-token = os.getenv("DISCORD_TOKEN")
-bot.run(token)
+
+# Pobranie tokenu ze zmiennej środowiskowej
+token = os.getenv('DISCORD_TOKEN')
+if token:
+    bot.run(token)
+else:
+    print("Token bota nie został ustawiony. Upewnij się, że zmienna środowiskowa DISCORD_TOKEN jest poprawnie skonfigurowana.")
