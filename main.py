@@ -28,8 +28,23 @@ def keep_alive():
 
 # Reklama serwera
 server_ad = """
-**Zapraszamy na nasz serwer programistyczny!**
+**Jesteś doświadczonym programistą i szukasz forum, gdzie uzyskasz wsparcie i podzielisz się efektem swojej pracy? A może dopiero zaczynasz swoją przygodę z kodowaniem? Niezależnie od stopnia zaawansowania zapraszamy na nasz serwer programistyczny.**
+
+Co oferujemy:
+- pomoc programistyczną,
+- kanały dostosowane do różnych języków programistycznych,
+- sklep z itemami,
+- miejsce, gdzie znajdziesz ludzi z pasją,
+- stały rozwój serwera.
+
+Kogo szukamy:
+- programistów,
+- administracji,
+- aktywnych użytkowników,
+- realizatorów partnerstw.
 https://discord.gg/pPss9qWZ6p
+https://share.creavite.co/67646e7f0ae0e4f686a629f9.gif
+https://share.creavite.co/67646f950ae0e4f686a62a01.gif
 """
 
 # Lista użytkowników partnerstwa
@@ -64,22 +79,4 @@ async def on_message(message):
             else:
                 channel = discord.utils.get(guild.text_channels, name="🤝partnerstwa")
                 if not channel:
-                    await message.channel.send("Nie znaleziono kanału '🤝partnerstwa'.")
-                    return
-
-                user_ad = partnering_users[message.author.id]
-                await channel.send(user_ad)
-                await message.channel.send("✅ Dziękujemy za partnerstwo!")
-                partnering_users.pop(message.author.id)
-
-    await bot.process_commands(message)
-
-# Uruchomienie bota
-keep_alive()
-
-# Pobranie tokenu ze zmiennej środowiskowej
-token = os.getenv('DISCORD_TOKEN')
-if token:
-    bot.run(token)
-else:
-    print("Token bota nie został ustawiony. Upewnij się, że zmienna środowiskowa DISCORD_TOKEN jest poprawnie skonfigurowana.")
+                    await message.channel.send("Nie znaleziono kanału '🤝
