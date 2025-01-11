@@ -28,8 +28,23 @@ def keep_alive():
 
 # Reklama serwera
 server_ad = """
-**Zapraszamy na nasz serwer programistyczny!**
+**Jesteś doświadczonym programistą i szukasz forum, gdzie uzyskasz wsparcie i podzielisz się efektem swojej pracy? A może dopiero zaczynasz swoją przygodę z kodowaniem? Niezależnie od stopnia zaawansowania zapraszamy na nasz serwer programistyczny.**
+
+Co oferujemy:
+- pomoc programistyczną,
+- kanały dostosowane do różnych języków programistycznych,
+- sklep z itemami,
+- miejsce, gdzie znajdziesz ludzi z pasją,
+- stały rozwój serwera.
+
+Kogo szukamy:
+- programistów,
+- administracji,
+- aktywnych użytkowników,
+- realizatorów partnerstw.
 https://discord.gg/pPss9qWZ6p
+https://share.creavite.co/67646e7f0ae0e4f686a629f9.gif
+https://share.creavite.co/67646f950ae0e4f686a62a01.gif
 """
 
 # Lista użytkowników partnerstwa
