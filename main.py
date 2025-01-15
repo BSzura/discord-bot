@@ -4,13 +4,10 @@ from flask import Flask
 from threading import Thread
 import os
 
-import asyncio
-
-
-
-
-
-
+# Intencje
+intents = discord.Intents.default()
+intents.message_content = True
+intents.members = True
 
 # Bot
 bot = commands.Bot(command_prefix="!", intents=intents)
