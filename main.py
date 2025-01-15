@@ -5,20 +5,10 @@ from threading import Thread
 import os
 
 import asyncio
-import websockets
-
-intents = discord.Intents.default()
-intents.presences = True
-intents.members = True
-
-client = discord.Client(intents=intents)
 
 
-async def hello():
-    async with websockets.connect('ws://example.com/socket') as websocket:
-        await websocket.send("Hello, world!")
-        greeting = await websocket.recv()
-        print(f"< {greeting}")
+
+
 
 asyncio.get_event_loop().run_until_complete(hello())
 
