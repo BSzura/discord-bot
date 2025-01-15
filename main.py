@@ -4,6 +4,18 @@ from flask import Flask
 from threading import Thread
 import os
 
+import asyncio
+import websockets
+
+async def hello():
+    async with websockets.connect('ws://example.com/socket') as websocket:
+        await websocket.send("Hello, world!")
+        greeting = await websocket.recv()
+        print(f"< {greeting}")
+
+asyncio.get_event_loop().run_until_complete(hello())
+
+
 # Intencje
 intents = discord.Intents.default()
 intents.message_content = True
