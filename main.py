@@ -7,6 +7,13 @@ import os
 import asyncio
 import websockets
 
+intents = discord.Intents.default()
+intents.presences = True
+intents.members = True
+
+client = discord.Client(intents=intents)
+
+
 async def hello():
     async with websockets.connect('ws://example.com/socket') as websocket:
         await websocket.send("Hello, world!")
