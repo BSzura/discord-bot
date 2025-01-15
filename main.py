@@ -98,3 +98,8 @@ if token:
     bot.run(token)
 else:
     print("Token bota nie został ustawiony. Upewnij się, że zmienna środowiskowa DISCORD_TOKEN jest poprawnie skonfigurowana.")
+
+
+
+
+
