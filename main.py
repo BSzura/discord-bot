@@ -82,6 +82,6 @@ async def on_message(message):
 keep_alive()
 
 try:
-    bot.run('MTMyNTgwNzI5MTAzOTA5Mjc1Ng.GZm_sa.SRJM7a0WIAHUceNEGVRjW1IRGHNlxfH-ZIf1RQ')
+    bot.run('DISCORD_TOKEN')
 except Exception as e:
     print(f'Error: {e}')
