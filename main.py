@@ -79,7 +79,11 @@ async def on_message(message):
                 await message.channel.send("❕ Dołącz na serwer, aby kontynuować!")
             else:
                 channel = discord.utils.get(guild.text_channels, name="🤝partnerstwa")
-
+token = DISCORD_TOKEN
+if token:
+    client.login(token)
+else:
+    print("Token bota nie został ustawiony. Upewnij się, że zmienna środowiskowa DISCORD_TOKEN jest poprawnie skonfigurowana.")
 
 
 
